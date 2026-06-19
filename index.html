@@ -6,32 +6,28 @@
 <title>Virtual Store Tech</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
 body{
+font-family:Arial,sans-serif;
+margin:0;
 background:#f4f6f9;
 }
 
 header{
-background:#0d6efd;
+background:#6c757d;
 color:white;
 text-align:center;
 padding:30px;
 }
 
 header h1{
-margin-bottom:10px;
+font-size:55px;
+margin:0;
 }
 
 #buscador{
 width:60%;
-max-width:500px;
-padding:12px;
+padding:10px;
+margin-top:15px;
 border:none;
 border-radius:5px;
 }
@@ -39,76 +35,62 @@ border-radius:5px;
 .carrito{
 position:fixed;
 top:15px;
-right:20px;
+right:15px;
 background:white;
-color:#0d6efd;
-padding:12px;
-border-radius:10px;
+padding:10px;
+border-radius:8px;
 font-weight:bold;
-box-shadow:0 2px 5px rgba(0,0,0,0.2);
 }
 
 .container{
-width:90%;
+width:95%;
 margin:auto;
-padding:30px 0;
-}
-
-.categorias{
-background:white;
 padding:20px;
-border-radius:10px;
-margin-bottom:25px;
-box-shadow:0 2px 8px rgba(0,0,0,.1);
 }
 
 .productos{
 display:flex;
 flex-wrap:wrap;
-gap:20px;
 justify-content:center;
+gap:15px;
 }
 
 .card{
 background:white;
-width:280px;
-padding:20px;
+width:23%;
+min-width:220px;
+padding:15px;
 border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,.15);
+box-shadow:0 2px 5px rgba(0,0,0,.2);
 text-align:center;
 }
 
-.card h3{
-margin-bottom:10px;
-}
-
 .precio{
-color:green;
-font-size:22px;
+font-size:20px;
 font-weight:bold;
-margin:10px 0;
+color:black;
 }
 
 button{
 width:100%;
 padding:10px;
-border:none;
-background:#0d6efd;
+background:#6c757d;
 color:white;
+border:none;
 border-radius:5px;
 cursor:pointer;
 }
 
 button:hover{
-background:#084298;
+background:#4f565c;
 }
 
 footer{
 background:#222;
 color:white;
 text-align:center;
-padding:20px;
-margin-top:40px;
+padding:30px;
+margin-top:30px;
 }
 
 #mensaje{
@@ -118,8 +100,8 @@ bottom:20px;
 right:20px;
 background:green;
 color:white;
-padding:15px;
-border-radius:8px;
+padding:12px;
+border-radius:5px;
 }
 </style>
 </head>
@@ -127,13 +109,12 @@ border-radius:8px;
 <body>
 
 <div class="carrito">
-🛒 Carrito: <span id="contador">0</span>
+🛒 <span id="contador">0</span>
 </div>
 
 <header>
 <h1>🛒 Virtual Store Tech</h1>
-<p>Catálogo virtual de productos tecnológicos</p>
-<br>
+<p>Tienda virtual de tecnología</p>
 
 <input
 type="text"
@@ -144,9 +125,7 @@ onkeyup="buscarProducto()">
 
 <div class="container">
 
-<div class="categorias">
 <h2>Categorías</h2>
-<br>
 <p>
 💻 Computadores |
 📱 Celulares |
@@ -155,112 +134,112 @@ onkeyup="buscarProducto()">
 💾 Almacenamiento |
 📺 Televisores
 </p>
-</div>
 
-<h2 style="margin-bottom:20px;">Productos Destacados</h2>
+<br>
+
+<h2>Productos Destacados</h2>
 
 <div class="productos">
 
 <div class="card">
 <h3>iPhone 17 Pro Max</h3>
-<p>Pantalla Super Retina XDR</p>
 <p class="precio">$8.499.900 COP</p>
 <button onclick="agregar()">Agregar al carrito</button>
 </div>
 
 <div class="card">
 <h3>Samsung Galaxy S25 Ultra</h3>
-<p>256GB - Cámara Profesional</p>
 <p class="precio">$7.299.900 COP</p>
 <button onclick="agregar()">Agregar al carrito</button>
 </div>
 
 <div class="card">
 <h3>Laptop Gamer RTX</h3>
-<p>16GB RAM - SSD 1TB</p>
 <p class="precio">$6.299.900 COP</p>
 <button onclick="agregar()">Agregar al carrito</button>
 </div>
 
 <div class="card">
 <h3>Smart TV 55"</h3>
-<p>4K Ultra HD</p>
 <p class="precio">$3.799.900 COP</p>
 <button onclick="agregar()">Agregar al carrito</button>
 </div>
 
 <div class="card">
 <h3>PlayStation 5</h3>
-<p>Consola de última generación</p>
 <p class="precio">$2.999.900 COP</p>
 <button onclick="agregar()">Agregar al carrito</button>
 </div>
 
 <div class="card">
 <h3>Smartwatch Pro</h3>
-<p>Monitor de actividad física</p>
 <p class="precio">$1.299.900 COP</p>
 <button onclick="agregar()">Agregar al carrito</button>
 </div>
 
 <div class="card">
-<h3>Audífonos Bluetooth</h3>
-<p>Cancelación de ruido</p>
-<p class="precio">$699.900 COP</p>
+<h3>AirPods 4 Apple</h3>
+<p class="precio">$949.900 COP</p>
 <button onclick="agregar()">Agregar al carrito</button>
 </div>
 
 <div class="card">
 <h3>SSD Samsung 1TB</h3>
-<p>Almacenamiento de alta velocidad</p>
 <p class="precio">$449.900 COP</p>
 <button onclick="agregar()">Agregar al carrito</button>
 </div>
 
 </div>
-
 </div>
 
 <div id="mensaje">
-Producto agregado al carrito
+✅ Producto agregado al carrito
 </div>
 
 <footer>
+
+<h3>Virtual Store Tech</h3>
+
+<p>
+Centro Comercial Viva Envigado<br>
+Cra. 48 #32B Sur-139, Envigado, Antioquia
+</p>
+
+<p>
+Teléfono: +57 604 555 7890
+</p>
+
+<p>
 © 2026 Virtual Store Tech
+</p>
+
 </footer>
 
 <script>
-
-let carrito = 0;
+let carrito=0;
 
 function agregar(){
 carrito++;
-document.getElementById("contador").innerText = carrito;
+document.getElementById("contador").innerText=carrito;
 
-let mensaje = document.getElementById("mensaje");
-mensaje.style.display = "block";
+let mensaje=document.getElementById("mensaje");
+mensaje.style.display="block";
 
-setTimeout(function(){
-mensaje.style.display = "none";
+setTimeout(()=>{
+mensaje.style.display="none";
 },2000);
 }
 
 function buscarProducto(){
-
-let filtro = document.getElementById("buscador").value.toLowerCase();
-let cards = document.getElementsByClassName("card");
+let filtro=document.getElementById("buscador").value.toLowerCase();
+let cards=document.getElementsByClassName("card");
 
 for(let i=0;i<cards.length;i++){
+let texto=cards[i].innerText.toLowerCase();
 
-let texto = cards[i].innerText.toLowerCase();
-
-if(texto.includes(filtro)){
-cards[i].style.display="block";
-}else{
-cards[i].style.display="none";
+cards[i].style.display=
+texto.includes(filtro) ? "block" : "none";
 }
-}
-
 }
 </script>
 
